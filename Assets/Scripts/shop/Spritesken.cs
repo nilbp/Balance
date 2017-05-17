@@ -6,4 +6,8 @@ public class Spritesken : MonoBehaviour {
 
 	public Sprite[] spriteList;
 
+	void Start()
+	{
+		GetComponent<SpriteRenderer> ().sprite = spriteList [0];
+	}
 }
