@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: 37ef2531b7746a148b731e68f4b1ca1f
+timeCreated: 1493197791
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "kendama b\xE0sic_0"
+    21300002: "kendama b\xE0sic_1"
+    21300004: "kendama b\xE0sic_2"
+    21300006: "kendama b\xE0sic_3"
+    21300008: "kendama b\xE0sic_4"
+    21300010: "kendama b\xE0sic_5"
+    21300012: "kendama b\xE0sic_6"
+    21300014: "kendama b\xE0sic_7"
+    21300016: "kendama b\xE0sic_8"
+    21300018: "kendama b\xE0sic_9"
+    21300020: "kendama b\xE0sic_10"
+    21300022: "kendama b\xE0sic_11"
+    21300024: "kendama b\xE0sic_12"
+    21300026: "kendama b\xE0sic_13"
+    21300028: "kendama b\xE0sic_14"
+    21300030: "kendama b\xE0sic_15"
+    21300032: "kendama b\xE0sic_16"
+    21300034: "kendama b\xE0sic_17"
+    21300036: "kendama b\xE0sic_18"
+    21300038: "kendama b\xE0sic_19"
+    21300040: "kendama b\xE0sic_20"
+    21300042: "kendama b\xE0sic_21"
+    21300044: "kendama b\xE0sic_22"
+    21300046: "kendama b\xE0sic_23"
+    21300048: "kendama b\xE0sic_24"
+    21300050: "kendama b\xE0sic_25"
+    21300052: "kendama b\xE0sic_26"
+    21300054: "kendama b\xE0sic_27"
+    21300056: "kendama b\xE0sic_28"
+    21300058: "kendama b\xE0sic_29"
+    21300060: "kendama b\xE0sic_30"
+    21300062: "kendama b\xE0sic_31"
+    21300064: "kendama b\xE0sic_32"
+    21300066: "kendama b\xE0sic_33"
+    21300068: "kendama b\xE0sic_34"
+    21300070: "kendama b\xE0sic_35"
+    21300072: "kendama b\xE0sic_36"
+    21300074: "kendama b\xE0sic_37"
+    21300076: "kendama b\xE0sic_38"
+    21300078: "kendama b\xE0sic_39"
+    21300080: "kendama b\xE0sic_40"
+    21300082: "kendama b\xE0sic_41"
+    21300084: "kendama b\xE0sic_42"
+    21300086: "kendama b\xE0sic_43"
+    21300088: "kendama b\xE0sic_44"
+    21300090: "kendama b\xE0sic_45"
+    21300092: "kendama b\xE0sic_46"
+    21300094: "kendama b\xE0sic_47"
+    21300096: "kendama b\xE0sic_48"
+    21300098: "kendama b\xE0sic_49"
+    21300100: "kendama b\xE0sic_50"
+    21300102: "kendama b\xE0sic_51"
+    21300104: "kendama b\xE0sic_52"
+    21300106: "kendama b\xE0sic_53"
+    21300108: "kendama b\xE0sic_54"
+    21300110: "kendama b\xE0sic_55"
+    21300112: "kendama b\xE0sic_56"
+    21300114: "kendama b\xE0sic_57"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: "kendama b\xE0sic_0"
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 730
+        width: 71
+        height: 218
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 218}
+        - {x: 3, y: 176}
+        - {x: 0, y: 67}
+        - {x: 0, y: 0}
+        - {x: 71, y: 0}
+        - {x: 71, y: 166}
+        - {x: 50, y: 216}
+        - {x: 45, y: 218}
+    - name: "kendama b\xE0sic_7"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 947
+        width: 147
+        height: 1
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: "kendama b\xE0sic_14"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 539
+        width: 168
+        height: 253
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 168, y: 196}
+        - {x: 144, y: 202}
+        - {x: 119, y: 217}
+        - {x: 71, y: 253}
+        - {x: 3, y: 253}
+        - {x: 0, y: 251}
+        - {x: 0, y: 9}
+        - {x: 9, y: 1}
+        - {x: 24, y: 0}
+        - {x: 70, y: 0}
+        - {x: 110, y: 34}
+        - {x: 141, y: 50}
+        - {x: 168, y: 60}
+    - name: "kendama b\xE0sic_15"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 547
+        width: 172
+        height: 239
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 162, y: 235}
+        - {x: 132, y: 239}
+        - {x: 98, y: 239}
+        - {x: 56, y: 209}
+        - {x: 0, y: 185}
+        - {x: 0, y: 51}
+        - {x: 68, y: 24}
+        - {x: 100, y: 0}
+        - {x: 155, y: 0}
+        - {x: 172, y: 9}
+        - {x: 172, y: 225}
+    - name: "kendama b\xE0sic_23"
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 561
+        width: 77
+        height: 170
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 170}
+        - {x: 0, y: 0}
+        - {x: 77, y: 0}
+        - {x: 77, y: 170}
+    - name: "kendama b\xE0sic_24"
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 215
+        height: 561
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 215, y: 24}
+        - {x: 215, y: 77}
+        - {x: 209, y: 91}
+        - {x: 197, y: 178}
+        - {x: 199, y: 201}
+        - {x: 208, y: 220}
+        - {x: 208, y: 242}
+        - {x: 189, y: 274}
+        - {x: 176, y: 335}
+        - {x: 160, y: 450}
+        - {x: 149, y: 561}
+        - {x: 70, y: 561}
+        - {x: 65, y: 485}
+        - {x: 47, y: 346}
+        - {x: 32, y: 264}
+        - {x: 15, y: 243}
+        - {x: 13, y: 221}
+        - {x: 23, y: 197}
+        - {x: 25, y: 191}
+        - {x: 22, y: 151}
+        - {x: 17, y: 104}
+        - {x: 15, y: 80}
+        - {x: 4, y: 71}
+        - {x: 4, y: 39}
+        - {x: 9, y: 18}
+        - {x: 17, y: 8}
+        - {x: 36, y: 2}
+        - {x: 52, y: 0}
+        - {x: 158, y: 0}
+        - {x: 187, y: 3}
+        - {x: 204, y: 8}
+        - {x: 213, y: 14}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
