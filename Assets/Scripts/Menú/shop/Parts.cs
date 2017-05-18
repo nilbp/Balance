@@ -6,7 +6,7 @@ public class Parts: MonoBehaviour {
 
 
 
-	public void parts(string hola)
+	public void Click ()
 	{
 		GetComponent<SpriteRenderer> ().color = new Color (200f, 200f, 100f, 255f);
 	}
