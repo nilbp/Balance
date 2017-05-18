@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: faed2db6c923643aebe50e18b11f6015
-timeCreated: 1495007072
+timeCreated: 1495040965
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -82,10 +82,10 @@ TextureImporter:
       name: Panel_groc_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 382
-        width: 840
-        height: 478
+        x: 97
+        y: 436
+        width: 836
+        height: 370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
