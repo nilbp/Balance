@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangePrefab : MonoBehaviour {
 
 
-	public GameObject kendama2;
+	public Button YourButton;
+	public GameObject partoriginal;
+	public GameObject partcanviada;
 
 	void canvikendama () {
-		GameObject kendamawood = (GameObject) Instantiate(kendama2, transform.position, transform.rotation);
-
+		GameObject partoriginal = (GameObject) Instantiate(partcanviada, transform.position, transform.rotation);
+		DestroyObject (partoriginal);
 	}
 
-	// Calls the fire method when holding down ctrl or mouse
-	void Update () {
-		if (Input.GetKey(KeyCode.H))
-		{
-			canvikendama();
-		}
+
+	public void on_click () {
+		Button button = YourButton.GetComponent <Button> ();
+		button.onClick.AddListener (canvikendama);
 	}
 }
