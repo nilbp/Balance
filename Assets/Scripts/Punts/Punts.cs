@@ -23,7 +23,7 @@ public class Punts : MonoBehaviour {
     bool smallCup = false;
     bool bottom = false;
 
-
+	public GameObject Prova;
   	
 	void Start() {
 
@@ -39,7 +39,7 @@ public class Punts : MonoBehaviour {
 		multi ();
 		EndCombo ();
 	}
-
+		
 	void multi (){
 	
 		if (punts > 20 && punts < 100) {
@@ -54,7 +54,7 @@ public class Punts : MonoBehaviour {
 		if (punts > 1000 && punts < 4000) {
 			multiplicador = 5;
 		}
-		multiplier.text = " "+multiplicador+ "x";
+		multiplier.text = multiplicador + "x";
 	
 	}
 
