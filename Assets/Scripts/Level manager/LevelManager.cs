@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
 		public int UnLocked;
 		public bool IsInteractable;
 
-		public Button.ButtonClickedEvent OnClickEvent;
+
 	}
 
 	public GameObject levelButton;
@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Start () 
 	{
-		DeleteAll ();
+		//DeleteAll ();
 		FillList ();
 
 	}
@@ -36,14 +36,31 @@ public class LevelManager : MonoBehaviour {
 			LevelButton button = newbutton.GetComponent<LevelButton> ();
 			button.LevelText.text = level.LevelText;
 
-			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text) == 1) {
+			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text ) == 1) {
 				level.UnLocked = 1;
 				level.IsInteractable = true;
 			}
 
 			button.unlocked = level.UnLocked;
 			button.GetComponent<Button> ().interactable = level.IsInteractable;
-		
+			button.GetComponent<Button> ().onClick.AddListener(() => loadLevels("Level" + button.LevelText.text));
+
+			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 0)
+			{
+				
+			}
+			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 200)
+			{
+
+			}
+			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 500)
+			{
+
+			}
+			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 1000)
+			{
+
+			}
 			newbutton.transform.SetParent (Spacer);
 
 		}
@@ -71,6 +88,11 @@ public class LevelManager : MonoBehaviour {
 	void DeleteAll()
 	{
 		PlayerPrefs.DeleteAll ();
+	}
+
+	void loadLevels(string value)
+	{
+		Application.LoadLevel (value);
 	}
 
 }

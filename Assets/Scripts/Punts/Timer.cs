@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     
-    public float temps = 60.0f;
+	public float temps = 60f;
     public Text timer;
     void Update()
     {
 
        temps -= Time.deltaTime;
-       timer.text = "Time left " + temps;
+       
+		timer.text = "Time left " + temps;
 
-        if (temps < 0.0)
+        if (temps < 0)
         {
             TimeEnded();
             
