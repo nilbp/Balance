@@ -6,40 +6,81 @@ public class Punts : MonoBehaviour {
 
     
 
-    public int punts = 0;
+    
     public Text PreScore;
-	public int ArroundTheWorld;
-	public int ArroundThePerfecture;
-	public int Moshikame;
-	public int ArroundJapan;
+	int ArroundTheWorld;
+	int ArroundThePerfecture;
+	int Moshikame;
+	int ArroundJapan;
+
+	int FirstSteps;
+	int TwoColors;
+
+
+
 	public Text Combo;
-	public int multiplicador;
 	public Text multiplier;
 	public Text TotScore;
+
 	public int TotalScore = 0;
+	public int punts = 0;
+	public int multiplicador = 1;
+
 
     bool spike = false;
     bool bigCup = false;
     bool smallCup = false;
     bool bottom = false;
 
-	public GameObject Prova;
-  	
 	void Start() {
 
-		multiplicador = 1;
+
+
 
 	}
 
 	void Update(){
 
 
-
-		combos ();
+		BasicCombos ();
 		multi ();
 		EndCombo ();
+		SpecialCombos ();
+
+		/*Debug.Log (PlayerPrefs.GetInt ("Bigcup"));
+		Debug.Log (PlayerPrefs.GetInt ("Smallcup"));
+		Debug.Log (PlayerPrefs.GetInt ("Spike"));
+		Debug.Log (PlayerPrefs.GetInt ("Bottom"));
+		Debug.Log (PlayerPrefs.GetInt ("Body"));*/
+
 	}
+
+
 		
+	void SpecialCombos(){
+
+
+		if(PlayerPrefs.GetInt("Bigcup")== 1 && FirstSteps == 2) {
+
+			punts = punts + 10 *multiplicador;
+			StartCoroutine(combo("First Steps +10 points",2));
+			FirstSteps = 0;
+			PreScore.text = " " + punts;
+		}
+
+		if (PlayerPrefs.GetInt ("Smallcup") == 1 && PlayerPrefs.GetInt ("Bigcup") == 1 && TwoColors == 4) 
+		{
+			punts = punts + 20 *multiplicador;
+			StartCoroutine(combo("Two Colors +20 points", 2));
+			TwoColors = 0;
+			PreScore.text = " " + punts;
+		
+		}
+
+
+	}
+			
+
 	void multi (){
 	
 		if (punts > 20 && punts < 100) {
@@ -54,7 +95,7 @@ public class Punts : MonoBehaviour {
 		if (punts > 1000 && punts < 4000) {
 			multiplicador = 5;
 		}
-		multiplier.text = multiplicador + "x";
+		//multiplier.text = multiplicador + "x";
 	
 	}
 
@@ -69,26 +110,26 @@ public class Punts : MonoBehaviour {
 	
 	}
 
-	void combos()
+	void BasicCombos()
 	{
 		if (ArroundTheWorld == 4) {
 
 			punts = punts + 25*multiplicador;
-			StartCoroutine(combo("Arround the world +25 punts",2));
+			StartCoroutine(combo("Arround the world +25 points",2));
 			ArroundTheWorld = 0;
 			PreScore.text = " " + punts;
 		}
 		if (Moshikame == 4) {
 
 			punts += 12*multiplicador;
-			StartCoroutine(combo("Moshikame +12 puntos", 2));
+			StartCoroutine(combo("Moshikame +12 points", 2));
 			Moshikame = 0;
 			PreScore.text = " " + punts;			
 		}
 		if (ArroundJapan == 3) {
 		
 			punts += 18*multiplicador;
-			StartCoroutine(combo("Arround Japan +20 puntos", 2));
+			StartCoroutine(combo("Arround Japan +20 points", 2));
 			ArroundJapan = 0;
 			PreScore.text = " " + punts;	
 		
@@ -96,7 +137,7 @@ public class Punts : MonoBehaviour {
 		if (ArroundThePerfecture == 2) {
 
 			punts += 18*multiplicador;
-			StartCoroutine(combo("Arround the perfecture +20 puntos", 2));
+			StartCoroutine(combo("Arround the perfecture +20 points", 2));
 			ArroundThePerfecture = 0;
 			PreScore.text = " " + punts;	
 
@@ -122,12 +163,14 @@ public class Punts : MonoBehaviour {
         if (other.tag == "BigCup" && bigCup==false)
         {
 			ArroundTheWorld++;
+			FirstSteps++;
 			punts+=1*multiplicador;
             spike = false; 
             bigCup = true;
             smallCup = false;
             bottom = false;
 			ArroundThePerfecture = 0;
+		
           	
 			if (ArroundJapan == 1) {
 			
@@ -140,6 +183,11 @@ public class Punts : MonoBehaviour {
 				Moshikame++;			
 			} else {
 				Moshikame = 0;
+			}
+			if (TwoColors == 2) {
+				TwoColors = 3;
+			} else {
+				TwoColors = 0;
 			}
 
 
@@ -161,7 +209,9 @@ public class Punts : MonoBehaviour {
 			if (ArroundThePerfecture == 0 && ArroundTheWorld != 3) {
 				ArroundThePerfecture++;
 			}
+			TwoColors++;
 			ArroundJapan = 0;
+			FirstSteps = 0;
 			punts=punts+3*multiplicador;
             spike = false;
             bigCup = false;
@@ -182,6 +232,19 @@ public class Punts : MonoBehaviour {
 			} else {
 				ArroundJapan = 0;
 			}
+			if (FirstSteps == 1) {
+				FirstSteps++;
+			} else {
+				FirstSteps = 0;
+			}
+			if (TwoColors == 1) {
+				TwoColors = 2;
+			} else if (TwoColors == 3) {
+				TwoColors = 4;
+			} else {
+				TwoColors = 0;
+			}
+
 			punts=punts+2*multiplicador;
             spike = false;
             bigCup = false;
@@ -216,6 +279,8 @@ public class Punts : MonoBehaviour {
             smallCup = false;
             bottom = false;
 			Moshikame = 0;
+			FirstSteps = 0;
+			TwoColors = 0;
 
 
 
@@ -226,6 +291,8 @@ public class Punts : MonoBehaviour {
 			ArroundTheWorld = 0;
 			ArroundJapan = 0;
 			ArroundThePerfecture = 0;
+			Moshikame = 0;
+			FirstSteps = 0;
 			multiplicador = 1;
             
         }
