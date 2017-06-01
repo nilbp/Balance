@@ -23,7 +23,7 @@ public class PartsGrogues: MonoBehaviour {
 		}
 		if (BotoGroc.name == "bigcup groc") {
 			groc.Bigcup = 1;
-			PlayerPrefs.SetInt ("Bigcup", 1);
+			PlayerPrefs.SetInt ("Bigcup", 1 );
 		}
 		if (BotoGroc.name == "spike groc") {
 			groc.Spike = 1;
