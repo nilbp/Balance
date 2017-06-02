@@ -9,7 +9,7 @@ public class PartsGrogues: MonoBehaviour {
 	public Button BotoGroc;
 	public GameObject part;
 
-	void click ()
+	void click () 
 	{
 		part.GetComponent<SpriteRenderer> ().color = new Color (0.78431f, 0.78431f, 0.255f, 1f); 
 

@@ -15,6 +15,7 @@ public class mover : MonoBehaviour{
 	public float topSpeed = 100;
 	public Rigidbody2D rigid;
 	public float speed=10;
+
 	void OnMouseDown()
 	{
 		//This grabs the position of the object in the world and turns it into the position on the screen
@@ -41,7 +42,7 @@ public class mover : MonoBehaviour{
 
 	public void FixedUpdate()
 	{
-		rigid.velocity = force*2;
+		rigid.velocity = force * 1;
 	}
 
 }

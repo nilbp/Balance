@@ -6,7 +6,7 @@ public class Rotacio : MonoBehaviour
 {
 
     
-    public float angle = 5;
+    public float angle = 5f;
 	public Rigidbody2D rigid;
 
 
@@ -15,11 +15,13 @@ public class Rotacio : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(-Vector3.back * angle);
+           transform.Rotate(-Vector3.back * angle);
+
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.back * angle);
+           transform.Rotate(Vector3.back * angle);
+
         }
   
 
