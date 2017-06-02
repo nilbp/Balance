@@ -18,7 +18,7 @@ public class Punts : MonoBehaviour {
 	int Asskick;
 	int PinxoMoruno;
 	int Bigpoppa;
-
+	 
 	int Kay;
 	int Lightning;
 	bool lightning=true;
@@ -88,7 +88,7 @@ public class Punts : MonoBehaviour {
 		if(PlayerPrefs.GetInt("Bigcup")== 1 && FirstSteps == 2) {
 
 			punts = punts + 5 *multiplicador;
-			StartCoroutine(combo("First Steps +" + 5*multiplicador + " points",2));
+			StartCoroutine(combo("First Step +" + 5*multiplicador + " points",2));
 			FirstSteps = 0;
 			PreScore.text = " " + punts;
 		}
