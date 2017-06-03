@@ -10,12 +10,14 @@ public class PartsGrogues: MonoBehaviour {
 	public GameObject part;
 
 
+	void Update(){
 
-	void click () 
+		BotoGroc.onClick.AddListener (pulsar);
+	}
+
+	void pulsar () 
 	{
 		part.GetComponent<SpriteRenderer> ().color = new Color (0.784f, 0.784f, 0.255f, 1f); 
-
-	
 
 
 		if (BotoGroc.name == "bottom groc") {
@@ -43,12 +45,5 @@ public class PartsGrogues: MonoBehaviour {
 
 
 
-	void Update(){
 
-
-
-		BotoGroc.onClick.AddListener (click);
-
-
-	}
 }
