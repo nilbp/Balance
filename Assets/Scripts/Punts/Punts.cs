@@ -32,7 +32,7 @@ public class Punts : MonoBehaviour {
 	int Chill;
 	bool chill=true;
 	int King;
-	int JohnWick;
+	public int JohnWick;
 
 	int Rainbow;
 	bool rainbow=true;

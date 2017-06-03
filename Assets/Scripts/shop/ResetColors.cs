@@ -12,9 +12,20 @@ public class ResetColors : MonoBehaviour {
 	public GameObject PART4;
 	public GameObject PART5;
 
+	public int check;
+	public int check1;
+	public int check2;
+	public int check3;
+	public int check4;
+
 	void Update () {
 
 		Button.onClick.AddListener (reset);
+		check = PlayerPrefs.GetInt ("Bigcup");
+		check1 = PlayerPrefs.GetInt ("Smallcup");
+		check2 = PlayerPrefs.GetInt ("Spike");
+		check3 = PlayerPrefs.GetInt ("Bottom");
+		check4 = PlayerPrefs.GetInt ("Body");
 
 	}
 
@@ -31,5 +42,7 @@ public class ResetColors : MonoBehaviour {
 		PlayerPrefs.SetInt ("Bottom", 0);
 		PlayerPrefs.SetInt ("Spike", 0);
 		PlayerPrefs.SetInt ("Body", 0);
+
+
 	}
 }
