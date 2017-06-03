@@ -42,6 +42,7 @@ public class Punts : MonoBehaviour {
 	public Text multiplier;
 	public Text TotScore;
 
+	public int comprovador;
 	public int TotalScore = 0;
 	public int punts = 0;
 	public int multiplicador = 1;
@@ -63,6 +64,7 @@ public class Punts : MonoBehaviour {
 
 	void Update(){
 
+
 		EndCombo ();
 		BasicCombos ();
 		YellowCombos ();
@@ -71,13 +73,13 @@ public class Punts : MonoBehaviour {
 		SpecialCombos ();
 
 		multi ();
-
+		PlayerPrefs.SetInt ("totalscore", TotalScore);
 		/*Debug.Log (PlayerPrefs.GetInt ("Bigcup"));
 		Debug.Log (PlayerPrefs.GetInt ("Smallcup"));
 		Debug.Log (PlayerPrefs.GetInt ("Spike"));
 		Debug.Log (PlayerPrefs.GetInt ("Bottom"));
 		Debug.Log (PlayerPrefs.GetInt ("Body"));*/
-
+		comprovador = PlayerPrefs.GetInt ("totalscore");
 	}
 
 

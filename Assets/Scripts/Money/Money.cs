@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Money : MonoBehaviour {
 
-	// Use this for initialization
+	public int money;
+	public Text moneytext;
+
 	void Start () {
-		
+		//moneytext.text = money;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void addMoney (int moneytoadd){
+		money += moneytoadd;
+		PlayerPrefs.SetInt ("money", money);
 	}
 }
