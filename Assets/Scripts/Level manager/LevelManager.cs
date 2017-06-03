@@ -13,8 +13,6 @@ public class LevelManager : MonoBehaviour {
 		public string LevelText;
 		public int UnLocked;
 		public bool IsInteractable;
-
-
 	}
 
 	public GameObject levelButton;
@@ -31,6 +29,8 @@ public class LevelManager : MonoBehaviour {
 
 	void FillList()
 	{
+
+
 		foreach (var level in LevelList) {
 			GameObject newbutton = Instantiate (levelButton) as GameObject;
 			LevelButton button = newbutton.GetComponent<LevelButton> ();
@@ -45,26 +45,11 @@ public class LevelManager : MonoBehaviour {
 			button.GetComponent<Button> ().interactable = level.IsInteractable;
 			button.GetComponent<Button> ().onClick.AddListener(() => loadLevels("Level" + button.LevelText.text));
 
-			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 0)
-			{
-				
-			}
-			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 200)
-			{
-
-			}
-			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 500)
-			{
-
-			}
-			if (PlayerPrefs.GetInt ("Level" + button.LevelText.text + "_score") > 1000)
-			{
-
-			}
+		
 			newbutton.transform.SetParent (Spacer);
 
 		}
-		SaveAll ();
+		//SaveAll ();
 	}
 
 	void SaveAll()
@@ -76,6 +61,7 @@ public class LevelManager : MonoBehaviour {
 		}
 
 		else*/
+
 			GameObject[] allButtons = GameObject.FindGameObjectsWithTag ("LevelButton");
 			foreach (GameObject buttons in allButtons)
 			{
