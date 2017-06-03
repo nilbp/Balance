@@ -5,23 +5,28 @@ using UnityEngine;
 public class Unlockable : MonoBehaviour {
 
 	int score = 200;
+	public int Highscore=200;
+	public int check;
 
 	void Start () {
 
-		PlayerPrefs.SetInt("Level2", 1);
-		PlayerPrefs.SetInt("Level1_score", score);
-		//StartCoroutine (Time ());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		//PlayerPrefs.SetInt ("Level2", 0);
+
+
 	}
 
-	IEnumerator Time()
-	{
+	void Update () {
 	
-		yield return new WaitForSeconds (2f);
-		Application.LoadLevel (5);
+
+		if (Highscore == 200) {
+			PlayerPrefs.SetInt ("Level2", 2);
+			check = 2000;
+		}
+
+		PlayerPrefs.SetInt("Level1_score", score);
+
+
 	}
 }
+
+
