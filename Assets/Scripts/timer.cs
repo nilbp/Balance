@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class timer : MonoBehaviour {
 
-	public static float timeSinceLevelLoad=60;
 
-	// Use this for initialization
+	float timeLeft=60;
+
 	void Start () {
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(timeSinceLevelLoad==0){
-			GameOver ();
-	}
-}
 
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		Debug.Log (timeLeft);
+		timeLeft -= Time.deltaTime;
+		if ( timeLeft < 0 )
+		{
+			GameOver();
+		}
+	}
 	void GameOver(){
-		Application.LoadLevel ("FinishGame");
+		
 	}
 }
