@@ -8,6 +8,7 @@ public class Punts : MonoBehaviour {
 
     
     public Text PreScore;
+
 	int ArroundTheWorld;
 	int ArroundThePerfecture;
 	int Moshikame;
@@ -47,10 +48,12 @@ public class Punts : MonoBehaviour {
 	public Text TotScore;
 
 	public int comprovador;
-	public int TotalScore = 0;
+	public int TotalScore;
 	public int punts = 0;
 	public int multiplicador = 1;
 
+	public GameObject Level;
+	public int check;
 
     bool spike = false;
     bool bigCup = false;
@@ -62,8 +65,15 @@ public class Punts : MonoBehaviour {
 	void Start() {
 
 
-
-
+		TotalScore = 0;
+		/*PlayerPrefs.SetInt ("totalscore1", 0);
+		PlayerPrefs.SetInt ("totalscore2", 0);
+		PlayerPrefs.SetInt ("totalscore3", 0);
+		PlayerPrefs.SetInt ("totalscore4", 0);
+		PlayerPrefs.SetInt ("totalscore5", 0);
+		PlayerPrefs.SetInt ("totalscore6", 0);
+		PlayerPrefs.SetInt ("totalscore7", 0);
+		PlayerPrefs.SetInt ("totalscore8", 0);*/
 	}
 
 	void Update(){
@@ -80,13 +90,50 @@ public class Punts : MonoBehaviour {
 		TotScore.text = "Total Score   " + TotalScore;
 
 		multi ();
-		PlayerPrefs.SetInt ("totalscore", TotalScore);
-		/*Debug.Log (PlayerPrefs.GetInt ("Bigcup"));
-		Debug.Log (PlayerPrefs.GetInt ("Smallcup"));
-		Debug.Log (PlayerPrefs.GetInt ("Spike"));
-		Debug.Log (PlayerPrefs.GetInt ("Bottom"));
-		Debug.Log (PlayerPrefs.GetInt ("Body"));*/
-		comprovador = PlayerPrefs.GetInt ("totalscore");
+
+
+
+
+
+		if (Level.name == "Level1" && PlayerPrefs.GetInt ("totalscore1") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore1", TotalScore);
+			check = 1;
+		}
+		else if (Level.name == "Level2" && PlayerPrefs.GetInt ("totalscore2") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore2", TotalScore);
+			check = 2;
+		}
+		else if (Level.name == "Level3" && PlayerPrefs.GetInt ("totalscore3") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore3", TotalScore);
+			check = 3;
+		}
+		else if (Level.name == "Level4" && PlayerPrefs.GetInt ("totalscore4") < TotalScore) {
+			PlayerPrefs.SetInt ("totalscore4", TotalScore);
+			check = 4;
+		}
+		if (Level.name == "Level5" && PlayerPrefs.GetInt ("totalscore5") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore5", TotalScore);
+			check =5;
+		}
+		else if (Level.name == "Level6" && PlayerPrefs.GetInt ("totalscore6") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore6", TotalScore);
+			check = 6;
+		}
+		else if (Level.name == "Level7" && PlayerPrefs.GetInt ("totalscore7") < TotalScore) {
+
+			PlayerPrefs.SetInt ("totalscore7", TotalScore);
+			check = 7;
+		}
+		else if (Level.name == "Level8" && PlayerPrefs.GetInt ("totalscor8") < TotalScore) {
+			PlayerPrefs.SetInt ("totalscore8", TotalScore);
+			check = 8;
+		}
+
 	}
 
 

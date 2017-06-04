@@ -14,7 +14,7 @@ public class Return : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.Q)) 
 		{
-			Application.LoadLevel("Shop");
+			Application.LoadLevel("MainMenu");
 		
 		}
 		
