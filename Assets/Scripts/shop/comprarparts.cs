@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class comprarparts : MonoBehaviour {
 
 
-	int money=100;
+	int money=200;
 	public int check;
 	public Button button;
 

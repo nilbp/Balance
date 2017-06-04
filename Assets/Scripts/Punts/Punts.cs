@@ -34,9 +34,13 @@ public class Punts : MonoBehaviour {
 	int King;
 	public int JohnWick;
 
+	//Special Combos
 	int Rainbow;
 	bool rainbow=true;
-
+	int PurpleEars;
+	int Punk;
+	int Prince;
+	int Demon;
 
 	public Text Combo;
 	public Text multiplier;
@@ -196,7 +200,7 @@ public class Punts : MonoBehaviour {
 		}
 		if (PlayerPrefs.GetInt ("Smallcup") == 3 && BigBang == 4) {
 
-			//Spike, BigCUp, Spike, SmallCup
+			//Spike, BigCup, Spike, SmallCup
 			punts = punts + 70 * multiplicador;
 			StartCoroutine (combo ("Big Bang +" + 70 * multiplicador + " points", 2));
 			BigBang = 0;
@@ -241,6 +245,7 @@ public class Punts : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("Bigcup") == 1 && PlayerPrefs.GetInt ("Smallcup") == 1 && PlayerPrefs.GetInt ("Bottom") == 2 &&
 		    PlayerPrefs.GetInt ("Spike") == 3 && Rainbow == 4) {
 
+			//BC i SC = Groc, Bottom = tronja, Spike = lila
 			//Bottom, Smallcup, BigCup, Spike
 			punts = punts + 20 * multiplicador;
 			Rainbow = 0;
@@ -253,6 +258,43 @@ public class Punts : MonoBehaviour {
 
 			PreScore.text = " " + punts;
 			rainbow = false;
+		}
+
+		if (PlayerPrefs.GetInt ("Bigcup") == 3 && PlayerPrefs.GetInt ("Smallcup") == 3 && PurpleEars == 4) {
+		//BigCup, SmallCup, BigCup, SmallCup
+			punts = punts + 40 * multiplicador;
+			StartCoroutine (combo ("Purpple Ears +" + 40 * multiplicador + " points", 2));
+			PurpleEars = 0;
+			PreScore.text = " " + punts;
+		
+		}
+
+		if (PlayerPrefs.GetInt ("Bigcup") == 1 && PlayerPrefs.GetInt ("Smallcup") == 1 && PlayerPrefs.GetInt("Bottom")== 1 && 
+			PlayerPrefs.GetInt("Body")==1 && PlayerPrefs.GetInt("Spike")==3 && Punk == 4) 
+		{
+			//SmallCup, Spike, BigCup, Spike
+			punts = punts + 40 * multiplicador;
+			StartCoroutine (combo ("Punk +" + 70 * multiplicador + " points", 2));
+			Punk = 0;
+			PreScore.text = " " + punts;
+
+		}
+		if (PlayerPrefs.GetInt ("Bigcup") == 3 && PlayerPrefs.GetInt ("Smallcup") == 3 && PlayerPrefs.GetInt("Spike") == 1 && Prince == 4) {
+			//Bottom, SmallCup, Bottom, Spike
+			punts = punts + 70 * multiplicador;
+			StartCoroutine (combo ("Prince +" + 50 * multiplicador + " points", 2));
+			Prince = 0;
+			PreScore.text = " " + punts;
+
+		}
+		if (PlayerPrefs.GetInt ("Bottom") == 2 && PlayerPrefs.GetInt ("Body") == 3 && PlayerPrefs.GetInt("Spike")==2
+			&& Demon == 2) {
+			//BTTM, SPK
+			punts = punts + 50 * multiplicador;
+			StartCoroutine (combo ("Demon +" + 40 * multiplicador + " points", 2));
+			Demon = 0;
+			PreScore.text = " " + punts;
+
 		}
 	}
 			
@@ -408,6 +450,17 @@ public class Punts : MonoBehaviour {
 			} else {
 				Rainbow = 0;
 			}
+			if (Punk == 2) {
+				Punk++;
+			} 
+			else{
+				Punk = 0;
+			}
+			if (PurpleEars == 0 || PurpleEars == 2) {
+				PurpleEars++;
+			} else {
+				PurpleEars = 0;
+			}
 
 			FirstSteps++;
 			punts+=1*multiplicador;
@@ -417,6 +470,9 @@ public class Punts : MonoBehaviour {
 			bottom = false;
 			ArroundThePerfecture = 0;
 			Hardscaffolding = 0;
+			Demon = 0;
+			Prince = 0;
+			Soup = 0;
         }
 
         if (other.tag == "Bottom" && bottom==false)
@@ -499,15 +555,28 @@ public class Punts : MonoBehaviour {
 			} else {
 				Rainbow = 0;
 			}
+			if (Demon == 0) {
+				Demon++;
+			} else {
+				Demon = 0;
+			}
+			if (Prince == 0 || Prince == 2) {
+				Prince++;
+			} else {
+				Prince = 0;
+			}
 
 			ArroundJapan = 0;
 			FirstSteps = 0;
 			PinxoMoruno = 0;
+			Punk = 0;
+			PurpleEars = 0;
 			punts=punts+3*multiplicador;
             spike = false;
             bigCup = false;
             smallCup = false;
             bottom = true;
+			BigBang = 0;
 
             
 
@@ -580,6 +649,27 @@ public class Punts : MonoBehaviour {
 			} else {
 				Rainbow = 0;
 			}
+			if(Demon ==1){
+				Demon++;
+			}else{
+				Demon=0;
+			}
+			if(Punk==0){
+				Punk++;
+			}else{
+				Punk=0;
+			}
+			if (Prince == 1) {
+				Prince++;
+			} else {
+				Prince = 0;
+			}
+			if (PurpleEars == 1 || PurpleEars == 3) {
+				PurpleEars++;
+			} else {
+				PurpleEars = 0;
+			}
+
 
 
 			punts=punts+2*multiplicador;
@@ -591,6 +681,7 @@ public class Punts : MonoBehaviour {
 			ArroundThePerfecture = 0;
 			PinxoMoruno = 0;
 			Chill = 0;
+			Demon=0;
         }
 
         if (other.tag == "Spike" && spike==false)
@@ -665,6 +756,22 @@ public class Punts : MonoBehaviour {
 			} else {
 				Rainbow = 0;
 			}
+			if (Demon == 1) {
+				Demon++;
+			} else {
+				Demon = 0;
+			}
+			if(Prince==3){
+				Prince++;
+			}else{
+				Prince=0;
+			}
+			if(Punk==1|| Punk==3){
+				Punk++;
+			}
+			else{
+				Punk=0;
+			}
 
 			punts=punts+5*multiplicador;
             spike = true;
@@ -676,7 +783,8 @@ public class Punts : MonoBehaviour {
 			TwoColors = 0;
 			Ellipse = 0;
 			Chill = 0;
-
+			Soup = 0;
+			PurpleEars = 0;
 
         }
         if (other.tag == "floor") {
@@ -697,6 +805,10 @@ public class Punts : MonoBehaviour {
 			King = 0;
 			JohnWick = 0;
 			Rainbow = 0;
+			Demon=0;
+			Prince=0;
+			PurpleEars =0;
+			Punk = 0;
 
 			multiplicador = 1;
 			push = true;
@@ -734,6 +846,10 @@ public class Punts : MonoBehaviour {
 			King = 0;
 			JohnWick = 0;
 			Rainbow = 0;
+			Demon = 0;
+			Prince = 0;
+			PurpleEars = 0;
+			Punk = 0;
 			rainbow = true;
 		}
 
