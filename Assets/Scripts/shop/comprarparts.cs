@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
 public class comprarparts : MonoBehaviour {
 
 
-	int money=200;
+	public int money=110;
 	public int check;
 	public Button button;
+
 
 	void Start(){
 	
@@ -23,6 +24,7 @@ public class comprarparts : MonoBehaviour {
 
 		if (button.name == "bigcup groc" && money >= 20) {
 			Levelunlocked ();
+			button.onClick.AddListener (restarmoney);
 		}
 	
 		else if (button.name == "smallcup groc" && money>=30) {
@@ -97,5 +99,9 @@ void Levelunlocked ()
 {
 		button.GetComponent<Button> ().interactable = true;
 }
+	void restarmoney (){
+		money -= 20;
+
+	}
 		
 }

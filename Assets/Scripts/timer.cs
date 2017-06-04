@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class timer : MonoBehaviour {
 
-
-	float timeLeft=60;
+	public GameObject panel;
+	float timeLeft=6;
 
 	void Start () {
-		
-
+		Time.timeScale = 1;
 	}
+	
 
-	// Update is called once per frame
-	void Update()
-	{
+	void Update () {
 		Debug.Log (timeLeft);
 		timeLeft -= Time.deltaTime;
-		if ( timeLeft < 0 )
+		if ( timeLeft <= 0 )
 		{
-			GameOver();
+			Time.timeScale = 0;
+			panel.SetActive (true);
 		}
-	}
-	void GameOver(){
-		
 	}
 }

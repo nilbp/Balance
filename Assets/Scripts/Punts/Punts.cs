@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Punts : MonoBehaviour { 
 
-    
 
     
     public Text PreScore;
@@ -62,8 +61,6 @@ public class Punts : MonoBehaviour {
 	void Start() {
 
 
-
-
 	}
 
 	void Update(){
@@ -87,6 +84,9 @@ public class Punts : MonoBehaviour {
 		Debug.Log (PlayerPrefs.GetInt ("Bottom"));
 		Debug.Log (PlayerPrefs.GetInt ("Body"));*/
 		comprovador = PlayerPrefs.GetInt ("totalscore");
+	
+
+	
 	}
 
 
