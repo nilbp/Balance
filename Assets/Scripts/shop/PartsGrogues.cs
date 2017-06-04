@@ -8,6 +8,7 @@ public class PartsGrogues: MonoBehaviour {
 
 	public Button BotoGroc;
 	public GameObject part;
+	public GameObject Prefab;
 
 
 	void Update(){
@@ -18,6 +19,7 @@ public class PartsGrogues: MonoBehaviour {
 	void pulsar () 
 	{
 		part.GetComponent<SpriteRenderer> ().color = new Color (0.784f, 0.784f, 0.255f, 1f); 
+		Prefab.GetComponent<SpriteRenderer> ().color = new Color (0.784f, 0.784f, 0.255f, 1f); 
 
 
 		if (BotoGroc.name == "bottom groc") {

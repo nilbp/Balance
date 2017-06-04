@@ -72,6 +72,9 @@ public class Punts : MonoBehaviour {
 		PurppleCombos ();
 		SpecialCombos ();
 
+		PreScore.text = "Line Score  " + punts;
+		TotScore.text = "Total Score   " + TotalScore;
+
 		multi ();
 		PlayerPrefs.SetInt ("totalscore", TotalScore);
 		/*Debug.Log (PlayerPrefs.GetInt ("Bigcup"));
@@ -702,8 +705,7 @@ public class Punts : MonoBehaviour {
 			chill = true;
 			rainbow = true;
         }
-		PreScore.text = " " + punts;
-		TotScore.text = " " + TotalScore;
+
     }
 
 	void EndCombo(){

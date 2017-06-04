@@ -8,11 +8,12 @@ public class PartsLiles: MonoBehaviour {
 
 	public Button BotoLila;
 	public GameObject part;
+	public GameObject Prefab;
 
 	void click(){
 
 		part.GetComponent<SpriteRenderer> ().color = new Color (0.7882f, 0.5176f, 0.8823f, 1f); 
-	
+		Prefab.GetComponent<SpriteRenderer> ().color = new Color (0.7882f, 0.5176f, 0.8823f, 1f); 
 			
 		if (BotoLila.name == "bottom lila") {
 			PlayerPrefs.SetInt ("Bottom", 3);

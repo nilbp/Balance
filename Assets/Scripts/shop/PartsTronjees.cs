@@ -7,13 +7,14 @@ public class PartsTronjees: MonoBehaviour {
 
 	public Button BotoTronja;
 	public GameObject part;
+	public GameObject Prefab;
 
 
 
 	void click (){
 
 		part.GetComponent<SpriteRenderer> ().color = new Color (0.8901f, 0.5607f, 0.3058f, 1f); 
-	
+		Prefab.GetComponent<SpriteRenderer> ().color = new Color (0.8901f, 0.5607f, 0.3058f, 1f); 
 	
 
 		if (BotoTronja.name == "bottom tronja") {
