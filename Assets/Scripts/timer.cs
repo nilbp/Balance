@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour {
 
 	public GameObject panel;
+<<<<<<< Updated upstream
 	public Text Timer;
 
 	float timeLeft=50;
+=======
+	float timeLeft=60;
+>>>>>>> Stashed changes
 
 	void Start () {
 		Time.timeScale = 1;
