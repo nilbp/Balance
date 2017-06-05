@@ -5,7 +5,7 @@ using UnityEngine;
 public class timer : MonoBehaviour {
 
 	public GameObject panel;
-	float timeLeft=6;
+	float timeLeft=60;
 
 	void Start () {
 		Time.timeScale = 1;

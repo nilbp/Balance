@@ -66,8 +66,8 @@ public class Punts : MonoBehaviour {
 	void Start() {
 
 
-<<<<<<< HEAD
-=======
+
+
 		TotalScore = 0;
 		/*PlayerPrefs.SetInt ("totalscore1", 0);
 		PlayerPrefs.SetInt ("totalscore2", 0);
@@ -77,7 +77,7 @@ public class Punts : MonoBehaviour {
 		PlayerPrefs.SetInt ("totalscore6", 0);
 		PlayerPrefs.SetInt ("totalscore7", 0);
 		PlayerPrefs.SetInt ("totalscore8", 0);*/
->>>>>>> master
+
 	}
 
 	void Update(){
@@ -95,7 +95,7 @@ public class Punts : MonoBehaviour {
 		TotScore.text = "Total Score   " + TotalScore;
 
 		multi ();
-<<<<<<< HEAD
+
 		PlayerPrefs.SetInt ("totalscore", TotalScore);
 		/*Debug.Log (PlayerPrefs.GetInt ("Bigcup"));
 		Debug.Log (PlayerPrefs.GetInt ("Smallcup"));
@@ -106,7 +106,6 @@ public class Punts : MonoBehaviour {
 	
 
 	
-=======
 
 
 
@@ -163,7 +162,7 @@ public class Punts : MonoBehaviour {
 			urs = PlayerPrefs.GetInt ("COINS");
 		}
 		
->>>>>>> master
+
 	}
 
 

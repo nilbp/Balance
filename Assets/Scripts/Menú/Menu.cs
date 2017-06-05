@@ -26,6 +26,41 @@ public class Menu : MonoBehaviour {
 		SceneManager.LoadScene (menu);
 
 	}
+	public void lvl2(string lvldos) 
+	{
+		SceneManager.LoadScene (lvldos);
+
+	}
+	public void lvl3(string Level3) 
+	{
+		SceneManager.LoadScene (Level3);
+
+	}
+	public void lvl4(string lvlqu) 
+	{
+		SceneManager.LoadScene (lvlqu);
+
+	}
+	public void lvl5(string lvlcin) 
+	{
+		SceneManager.LoadScene (lvlcin);
+
+	}
+	public void lvl6(string lvlsi) 
+	{
+		SceneManager.LoadScene (lvlsi);
+
+	}
+	public void lvl7(string lvlset) 
+	{
+		SceneManager.LoadScene (lvlset);
+
+	}
+	public void lvl8(string lvlvui) 
+	{
+		SceneManager.LoadScene (lvlvui);
+
+	}
 	public void exitbtn() 
 	{
 		Application.Quit ();
