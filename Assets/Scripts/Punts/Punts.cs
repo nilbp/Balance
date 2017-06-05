@@ -42,6 +42,7 @@ public class Punts : MonoBehaviour {
 	int Prince;
 	int Demon;
 
+
 	public Text Combo;
 	public Text multiplier;
 	public Text TotScore;
@@ -129,7 +130,7 @@ public class Punts : MonoBehaviour {
 			PlayerPrefs.SetInt ("totalscore4", TotalScore);
 
 		}
-		if (Level.name == "Level5" && PlayerPrefs.GetInt ("totalscore5") < TotalScore) {
+		else if (Level.name == "Level5" && PlayerPrefs.GetInt ("totalscore5") < TotalScore) {
 
 			PlayerPrefs.SetInt ("totalscore5", TotalScore);
 

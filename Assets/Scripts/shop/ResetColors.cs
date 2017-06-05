@@ -18,6 +18,11 @@ public class ResetColors : MonoBehaviour {
 	public int check3;
 	public int check4;
 
+	void Start(){
+	
+		reset ();
+	}
+
 	void Update () {
 
 		Button.onClick.AddListener (reset);
