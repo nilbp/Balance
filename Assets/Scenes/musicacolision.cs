@@ -5,7 +5,7 @@ using UnityEngine;
 public class musicacolision : MonoBehaviour {
 
 	public AudioClip sonido=null;
-	public float volumen=1.0f;
+	float volumen=5.0f;
 	protected Transform Posicion = null;
 
 	void Start () {
