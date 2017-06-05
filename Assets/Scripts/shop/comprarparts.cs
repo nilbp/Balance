@@ -85,85 +85,68 @@ public class comprarparts : MonoBehaviour {
 
 	void Update () {
 
-		if (button.name == "bigcup groc" && money >= 20 && cobrar) {
-			Levelunlocked ();
-<<<<<<< HEAD
-			button.GetComponent<Button> ().onClick.AddListener (restarmoney);
 
 
-		if (button.name == "bigcup groc") {
+
+			if (button.name == "bigcup groc") {
 			
-			if (money >= 20 && PlayerPrefs.GetInt ("BCG") == 0) {
+				if (money >= 20 && PlayerPrefs.GetInt ("BCG") == 0) {
 			
-				button.onClick.AddListener (() => Cobrar (1));
-				Levelunlocked ();
-			} else if (PlayerPrefs.GetInt ("BCG") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
+					button.onClick.AddListener (() => Cobrar (1));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BCG") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
 
-			} else {
-				Levellocked ();
+				} else {
+					Levellocked ();
+				}
+
+			} else if (button.name == "smallcup groc") {
+				if (money >= 30 && PlayerPrefs.GetInt ("SCG") == 0) {
+
+					button.onClick.AddListener (() => Cobrar (2));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("SCG") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "bottom groc") {
+				if (money >= 40 && PlayerPrefs.GetInt ("BMG") == 0) {
+
+					button.onClick.AddListener (() => Cobrar (3));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BMG") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "spike groc") {
+				if (money >= 50 && PlayerPrefs.GetInt ("SPG") == 0) {
+
+					button.onClick.AddListener (() => Cobrar (4));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("SPG") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "body groc") {
+				if (money >= 70 && PlayerPrefs.GetInt ("BDG") == 0) {
+
+					button.onClick.AddListener (() => Cobrar (5));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BDG") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
 			}
->>>>>>> master
-		}
-		 else if (button.name == "smallcup groc") {
-			if (money >= 30 && PlayerPrefs.GetInt ("SCG") == 0) {
-
-				button.onClick.AddListener (() => Cobrar (2));
-				Levelunlocked ();
-			} else if (PlayerPrefs.GetInt ("SCG") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			} else {
-				Levellocked ();
-			}
-		}
-
-				
-		else if (button.name == "bottom groc") {
-			if (money >= 40 && PlayerPrefs.GetInt ("BMG") == 0) {
-
-				button.onClick.AddListener (() => Cobrar (3));
-				Levelunlocked ();
-			} else if (PlayerPrefs.GetInt ("BMG") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			} else {
-				Levellocked ();
-			}
-		}
-
-
-		else if (button.name == "spike groc") {
-			if (money >= 50 && PlayerPrefs.GetInt ("SPG") == 0) {
-
-				button.onClick.AddListener (() => Cobrar (4));
-				Levelunlocked ();
-			} 
-
-			else if (PlayerPrefs.GetInt ("SPG") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			} else {
-				Levellocked ();
-			}
-		}
-
-		 
-		else if (button.name == "body groc") {
-			if (money >= 70 && PlayerPrefs.GetInt ("BDG") == 0) {
-
-				button.onClick.AddListener (() => Cobrar (5));
-				Levelunlocked ();
-			} else if (PlayerPrefs.GetInt ("BDG") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
 	
 
 
@@ -172,193 +155,133 @@ public class comprarparts : MonoBehaviour {
 		else if (button.name == "bigcup tronja") {
 			
 
-			if (money >= 200 && PlayerPrefs.GetInt ("BCT") == 0) {
+				if (money >= 200 && PlayerPrefs.GetInt ("BCT") == 0) {
 
-				button.onClick.AddListener (() => Cobrar (11));
-				Levelunlocked ();
-			} 
-
-			else if (PlayerPrefs.GetInt ("BCT") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-			else {
-				Levellocked ();
-			}
-		}
-
-		else if (button.name == "smallcup tronja") {
+					button.onClick.AddListener (() => Cobrar (11));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BCT") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "smallcup tronja") {
 		 
-			if (money >= 290 && PlayerPrefs.GetInt ("SCT") == 0) {
+				if (money >= 290 && PlayerPrefs.GetInt ("SCT") == 0) {
 
-				button.onClick.AddListener (() => Cobrar (12));
-				Levelunlocked ();
-			}
+					button.onClick.AddListener (() => Cobrar (12));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("SCT") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "bottom tronja") {
 
-			else if (PlayerPrefs.GetInt ("SCT") == 1) {
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
+				if (money >= 360 && PlayerPrefs.GetInt ("BMT") == 0) {
 
-
-			
-		else if (button.name == "bottom tronja") {
-
-			if (money >= 360 && PlayerPrefs.GetInt("BMT")==0) {
-
-				button.onClick.AddListener (() => Cobrar(13));
-				Levelunlocked ();
-			}
-			else if (PlayerPrefs.GetInt("BMT")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
-
-		else if (button.name == "spike tronja") {
+					button.onClick.AddListener (() => Cobrar (13));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BMT") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "spike tronja") {
 	
-			if (money >= 500 && PlayerPrefs.GetInt("SPT")==0) {
+				if (money >= 500 && PlayerPrefs.GetInt ("SPT") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(14));
-				Levelunlocked ();
-			}
-
-			else if (PlayerPrefs.GetInt("SPT")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
-	
-		else if (button.name == "body tronja") {
+					button.onClick.AddListener (() => Cobrar (14));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("SPT") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "body tronja") {
 			
-			if (money >= 600 && PlayerPrefs.GetInt("BDT")==0) {
+				if (money >= 600 && PlayerPrefs.GetInt ("BDT") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(15));
-				Levelunlocked ();
+					button.onClick.AddListener (() => Cobrar (15));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BDT") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
 			}
-
-			else if (PlayerPrefs.GetInt("BDT")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
 
 
 	//preu parts liles
 
 		else if (button.name == "bigcup lila") {
 
-			if (money >= 740 && PlayerPrefs.GetInt("BCL")==0) {
+				if (money >= 740 && PlayerPrefs.GetInt ("BCL") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(21));
-				Levelunlocked ();
-			}
-
-			else if (PlayerPrefs.GetInt("BCL")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
-
-
-
-		else if (button.name == "smallcup lila") {
+					button.onClick.AddListener (() => Cobrar (21));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BCL") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "smallcup lila") {
 			
-			if (money >= 870 && PlayerPrefs.GetInt("SCL")==0) {
+				if (money >= 870 && PlayerPrefs.GetInt ("SCL") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(22));
-				Levelunlocked ();
-			}
-
-			else if (PlayerPrefs.GetInt("SCL")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
-
-
-		else if (button.name == "bottom lila") {
+					button.onClick.AddListener (() => Cobrar (22));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("SCL") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "bottom lila") {
 			
-			if (money >= 1000 && PlayerPrefs.GetInt("BML")==0) {
+				if (money >= 1000 && PlayerPrefs.GetInt ("BML") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(23));
-				Levelunlocked ();
-			}
-
-			else if (PlayerPrefs.GetInt("BML")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
-
-
-		else if (button.name == "spike lila") {
+					button.onClick.AddListener (() => Cobrar (23));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BML") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "spike lila") {
 			
-			if (money >= 1300 && PlayerPrefs.GetInt("SPL")==0) {
+				if (money >= 1300 && PlayerPrefs.GetInt ("SPL") == 0) {
 
-				button.onClick.AddListener (() => Cobrar(24));
-				Levelunlocked ();
+					button.onClick.AddListener (() => Cobrar (24));
+					Levelunlocked ();
 
-			}
+				} else if (PlayerPrefs.GetInt ("SPL") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
+			} else if (button.name == "body lila") {
 
-			else if (PlayerPrefs.GetInt("SPL")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
-			}
-		}
+				if (money >= 2000 && PlayerPrefs.GetInt ("BDL") == 0) {
 
-
-		else if (button.name == "body lila") {
-
-			if (money >= 2000 && PlayerPrefs.GetInt("BDL")==0) {
-
-				button.onClick.AddListener (() => Cobrar(25));
-				Levelunlocked ();
-			}
-
-			else if (PlayerPrefs.GetInt("BDL")==1){
-				Levelunlocked ();
-				ButtonText.text = "OWNED";
-			}
-		
-			else {
-			Levellocked ();
+					button.onClick.AddListener (() => Cobrar (25));
+					Levelunlocked ();
+				} else if (PlayerPrefs.GetInt ("BDL") == 1) {
+					Levelunlocked ();
+					ButtonText.text = "OWNED";
+				} else {
+					Levellocked ();
+				}
 			}
 		}
-	}
+
 
 	void Cobrar(int value){
 
