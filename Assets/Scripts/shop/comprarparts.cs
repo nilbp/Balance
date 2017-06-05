@@ -85,7 +85,10 @@ public class comprarparts : MonoBehaviour {
 
 	void Update () {
 
-		money = PlayerPrefs.GetInt ("COINS");
+		if (button.name == "bigcup groc" && money >= 20 && cobrar) {
+			Levelunlocked ();
+<<<<<<< HEAD
+			button.GetComponent<Button> ().onClick.AddListener (restarmoney);
 
 
 		if (button.name == "bigcup groc") {
@@ -101,6 +104,7 @@ public class comprarparts : MonoBehaviour {
 			} else {
 				Levellocked ();
 			}
+>>>>>>> master
 		}
 		 else if (button.name == "smallcup groc") {
 			if (money >= 30 && PlayerPrefs.GetInt ("SCG") == 0) {
